@@ -6,8 +6,13 @@ use Doctrine\ORM\Mapping as ORM;
 
 trait SoftDeleteTrait
 {
+    //region Properties
     #[ORM\Column(type: 'datetime_immutable', nullable: true)]
     private ?\DateTimeImmutable $deletedAt = null;
+
+    //endregion
+
+    //region Getters / Setters
 
     public function getDeletedAt(): ?\DateTimeImmutable
     {
@@ -20,10 +25,12 @@ trait SoftDeleteTrait
         return $this;
     }
 
+
     public function isDeleted(): bool
     {
         return $this->deletedAt !== null;
     }
+    //endregion
 
     public function delete(): self
     {

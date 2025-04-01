@@ -6,9 +6,12 @@ use Doctrine\ORM\Mapping as ORM;
 
 trait EmailTrait
 {
+    //region Properties
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $email = null;
+    //endregion
 
+    //region Getters / Setters
     public function getEmail(): ?string
     {
         return $this->email;
@@ -19,4 +22,5 @@ trait EmailTrait
         $this->email = $email;
         return $this;
     }
+    //endregion
 }

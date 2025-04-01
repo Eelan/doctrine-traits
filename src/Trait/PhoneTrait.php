@@ -6,9 +6,12 @@ use Doctrine\ORM\Mapping as ORM;
 
 trait PhoneTrait
 {
+    //region Properties
     #[ORM\Column(length: 20, nullable: true)]
     private ?string $phone = null;
+    //endregion
 
+    //region Getters / Setters
     public function getPhone(): ?string
     {
         return $this->phone;
@@ -19,4 +22,5 @@ trait PhoneTrait
         $this->phone = $phone;
         return $this;
     }
+    //endregion
 }
