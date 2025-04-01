@@ -46,6 +46,11 @@ class Person
 
 All fields are mapped using PHP 8+ attributes (`#[ORM\Column(...)]`).
 
+---
+
+## 🧪 Example Entity
+
+See [examples/Person.php](examples/Person.php) for a complete example using all traits.
 
 ---
 
