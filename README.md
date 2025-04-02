@@ -31,7 +31,7 @@ composer require eelan/doctrine-traits
 
 ### `Eelan\DoctrineTraits\Personal`
 - `NameTrait` – `firstName`, `lastName`
-- `GenderTrait` – `gender`
+- `GenderTrait` – `gender` (based on enum `Gender`: `MALE`, `FEMALE`, `OTHER`, `UNKNOWN`)
 - `BirthTrait` – `birthDate`, `birthPlace`
 
 ### `Eelan\DoctrineTraits\Location`

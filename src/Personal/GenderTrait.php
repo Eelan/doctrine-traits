@@ -3,20 +3,25 @@
 namespace Eelan\DoctrineTraits\Personal;
 
 use Doctrine\ORM\Mapping as ORM;
+use Eelan\DoctrineTraits\Personal\Enum\Gender;
 
 trait GenderTrait
 {
-    #[ORM\Column(length: 10, nullable: true)]
-    private ?string $gender = null;
+    //region Properties
+    #[ORM\Column(nullable: true, enumType: Gender::class)]
+    private ?Gender $gender = null;
+    //endregion
 
-    public function getGender(): ?string
+    //region Getters / Setters
+    public function getGender(): ?Gender
     {
         return $this->gender;
     }
 
-    public function setGender(?string $gender): self
+    public function setGender(?Gender $gender): self
     {
         $this->gender = $gender;
         return $this;
     }
+    //endregion
 }
