@@ -20,12 +20,22 @@ composer require eelan/doctrine-traits
 
 ## 🧱 Available Traits
 
-- `AddressTrait` – Street, number, postal code, city, region, country
+### `Eelan\DoctrineTraits\Common`
+- `IdTrait` – Auto-increment integer ID
 - `TimestampTrait` – `createdAt`, `updatedAt` (with lifecycle callbacks)
-- `SoftDeleteTrait` – `deletedAt`
-- `PhoneTrait`, `EmailTrait`
-- `NameTrait`, `BirthTrait`, `GenderTrait`
-- ...more coming soon!
+- `SoftDeleteTrait` – `deletedAt`, with `delete()` and `restore()` methods
+
+### `Eelan\DoctrineTraits\Contact`
+- `PhoneTrait` – `phone`
+- `EmailTrait` – `email`
+
+### `Eelan\DoctrineTraits\Personal`
+- `NameTrait` – `firstName`, `lastName`
+- `GenderTrait` – `gender`
+- `BirthTrait` – `birthDate`, `birthPlace`
+
+### `Eelan\DoctrineTraits\Location`
+- `AddressTrait` – `streetName`, `streetNumber`, `postalCode`, `city`, `region`, `country`
 
 ---
 
@@ -34,11 +44,15 @@ composer require eelan/doctrine-traits
 In your Doctrine entity:
 
 ```php
-use Eelan\DoctrineTraits\Trait\AddressTrait;
+use Eelan\DoctrineTraits\Common\IdTrait;
+use Eelan\DoctrineTraits\Location\AddressTrait;
+use Eelan\DoctrineTraits\Contact\EmailTrait;
 
 class Person
 {
+    use IdTrait;
     use AddressTrait;
+    use EmailTrait;
 
     // your custom fields...
 }

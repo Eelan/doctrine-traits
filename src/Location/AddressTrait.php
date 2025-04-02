@@ -1,6 +1,6 @@
 <?php
 
-namespace Eelan\DoctrineTraits\Trait;
+namespace Eelan\DoctrineTraits\Location;
 
 use Doctrine\ORM\Mapping as ORM;
 

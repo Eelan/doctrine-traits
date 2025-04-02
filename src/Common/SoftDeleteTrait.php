@@ -1,6 +1,6 @@
 <?php
 
-namespace Eelan\DoctrineTraits\Trait;
+namespace Eelan\DoctrineTraits\Common;
 
 use Doctrine\ORM\Mapping as ORM;
 
