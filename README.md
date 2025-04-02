@@ -36,6 +36,7 @@ composer require eelan/doctrine-traits
 
 ### `Eelan\DoctrineTraits\Location`
 - `AddressTrait` – `streetName`, `streetNumber`, `postalCode`, `city`, `region`, `country`
+- `GpsCoordinateTrait` – `latitude`, `longitude`, and grouped coordinate helpers
 
 ---
 
