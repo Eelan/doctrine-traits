@@ -35,7 +35,8 @@ composer require eelan/doctrine-traits
 - `BirthTrait` – `birthDate`, `birthPlace`
 
 ### `Eelan\DoctrineTraits\Location`
-- `AddressTrait` – `streetName`, `streetNumber`, `postalCode`, `city`, `region`, `country`
+- `AddressTrait` – `streetName`, `streetNumber`, `postalCode`, `city`
+- `ExtendedAddressTrait` – extends `AddressTrait` and adds `region`, `country`
 - `GpsCoordinateTrait` – `latitude`, `longitude`, and grouped coordinate helpers
 
 ---
