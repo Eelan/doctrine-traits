@@ -2,6 +2,7 @@
     "name": "eelan/doctrine-traits",
     "description": "A collection of traits for Doctrine entities.",
     "type": "library",
+    "version": "0.0.2",
     "require": {
         "doctrine/orm": "^2.16 || ^3.0"
     },
